@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from "../../Model/User";
-import {UserService} from "../../user.service";
-import {OffresService} from "../offres.service";
+import {UserService} from "../../shared/user.service";
+import {OffresService} from "../../shared/offres.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Offre} from "../../Model/Offre";
 
@@ -21,7 +21,6 @@ export class UpdateOffreComponent implements OnInit {
     this.activatedRoute.params.subscribe((params)=>{
       this.offresService.getOffreById(params['id']).subscribe((rep)=>{
         this.offre = rep
-        console.log(rep)
       })
     })
 

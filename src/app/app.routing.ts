@@ -30,4 +30,4 @@ const APP_ROUTING = [
   {path:'', component: HomeComponent},
   {path:'**', component: ErrorComponent}
 ];
-export const ROUTING = RouterModule.forRoot(APP_ROUTING);
+export const ROUTING = RouterModule.forRoot(APP_ROUTING, { relativeLinkResolution: 'legacy' });

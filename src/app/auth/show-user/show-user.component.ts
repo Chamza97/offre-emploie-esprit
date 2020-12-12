@@ -1,7 +1,7 @@
 import {Component, Injectable, OnInit} from '@angular/core';
 import {User} from "../../Model/User";
 import {ActivatedRoute, Router} from "@angular/router";
-import {UserService} from "../../user.service";
+import {UserService} from "../../shared/user.service";
 import {DomSanitizer} from "@angular/platform-browser";
 
 @Component({

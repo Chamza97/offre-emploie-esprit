@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {UserService} from "../../user.service";
+import {UserService} from "../../shared/user.service";
 import {Router} from "@angular/router";
 
 
@@ -40,7 +40,6 @@ export class RegisterComponent implements OnInit {
   _handleReaderLoaded(readerEvt) {
     var binaryString = readerEvt.target.result;
     this.userData.photo= btoa(binaryString);
-    console.log(btoa(binaryString));
   }
 
 

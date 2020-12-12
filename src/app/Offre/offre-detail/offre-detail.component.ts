@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {OffresService} from "../offres.service";
+import {OffresService} from "../../shared/offres.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Offre} from "../../Model/Offre";
-import {UserService} from "../../user.service";
+import {UserService} from "../../shared/user.service";
 
 @Component({
   selector: 'app-offre-detail',
@@ -22,7 +22,6 @@ export class OffreDetailComponent implements OnInit {
       (params)=>{
         this.service.getOffreById(params.id).subscribe(
           (result) => {
-            console.log(result)
             this.offre = result;
           },
           (error) =>{

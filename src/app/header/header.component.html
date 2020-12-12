@@ -18,8 +18,6 @@
                   <ul id="navigation">
                     <li><a [routerLink]="['']">home</a></li>
                     <li><a [routerLink]="['/offre']">Browse Job</a></li>
-                    <li><a [routerLink]="['/QCM']">QCM </a></li>
-                    <li><a [routerLink]="['/Appointment']">Appointment</a></li>
                     <li><a *ngIf="userService.isAdmin() && userService.isLogged()" [routerLink]="['/user/list']">users</a></li>
                   </ul>
                 </nav>

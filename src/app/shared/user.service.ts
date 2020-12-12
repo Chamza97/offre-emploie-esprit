@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import {NgForm} from "@angular/forms";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {User} from "./Model/User";
+import {User} from "../Model/User";
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +23,6 @@ export class UserService {
   }
   getCurrentUser(email){
       this.http.get<User>(this.link + "users",{params: {email: email}}).subscribe(result => {
-        console.log(result)
         localStorage.setItem('user',JSON.stringify(result[0]))
       });
   }

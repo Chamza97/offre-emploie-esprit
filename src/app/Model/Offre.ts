@@ -14,7 +14,7 @@ export class Offre {
   tags : Tag[];
   userId : string;
 
-  constructor(id =1, titre ="", description ="", salaire =0, status=0,
+  constructor(id ="", titre ="", description ="", salaire =0, status=0,
               contrat_type ="", adresse="", nbAnneeExperience =0, datePublication = new Date(),
               dateModification= new Date(),tags=[], user ="") {
     this.id = id;

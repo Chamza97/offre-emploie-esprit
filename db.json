@@ -64,6 +64,37 @@
         }
       ],
       "userId": ""
+    },
+    {
+      "id": "irvruyygc8",
+      "titre": "ingenieur web",
+      "description": "ingenieur web",
+      "salaire": 4,
+      "status": 0,
+      "contratType": "",
+      "adresse": "ariana",
+      "nbAnneeExperience": 4,
+      "datePublication": "2020-12-12T14:44:14.842Z",
+      "dateModification": "2020-12-12T14:44:14.842Z",
+      "tags": [
+        {
+          "display": "HTML",
+          "value": "HTML"
+        },
+        {
+          "display": "JAVA",
+          "value": "JAVA"
+        },
+        {
+          "display": "PHP",
+          "value": "PHP"
+        },
+        {
+          "display": "ANGULAR",
+          "value": "ANGULAR"
+        }
+      ],
+      "userId": ""
     }
   ]
 }

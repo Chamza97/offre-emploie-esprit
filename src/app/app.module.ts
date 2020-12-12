@@ -34,6 +34,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { UpdateOffreComponent } from './Offre/update-offre/update-offre.component';
 import { TagPipe } from './Pipe/tag.pipe';
 import { SearchPipe } from './Pipe/search.pipe';
+import {RechercherOffreComponent} from "./Offre/rechercher-offre/rechercher-offre.component";
 
 
 @NgModule({
@@ -56,6 +57,7 @@ import { SearchPipe } from './Pipe/search.pipe';
     UpdateOffreComponent,
     TagPipe,
     SearchPipe,
+    RechercherOffreComponent,
 
   ],
   imports: [

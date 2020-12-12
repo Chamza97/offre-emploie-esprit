@@ -1,7 +1,7 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
-import {UserService} from "../../user.service";
+import {UserService} from "../../shared/user.service";
 
 
 @Component({

@@ -9,6 +9,7 @@ import {Injectable} from "@angular/core";
 export class Intercepteur implements HttpInterceptor{
   constructor() {}  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const token = localStorage.getItem('token');
+
     request = request.clone({
       setHeaders: {
         Authorization: `Bearer ${token}`,
@@ -16,7 +17,10 @@ export class Intercepteur implements HttpInterceptor{
         'Access-Control-Allow-Headers': 'Content-Type',
         "Access-Control-Allow-Origin": "*"
       }
-    });    return next.handle(request);
+
+    });
+    return next.handle(request);
+
   }
 
 }

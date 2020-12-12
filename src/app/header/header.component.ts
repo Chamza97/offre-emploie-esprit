@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {UserService} from "../user.service";
+import {UserService} from "../shared/user.service";
 import {User} from "../Model/User";
 import {DomSanitizer} from "@angular/platform-browser";
 

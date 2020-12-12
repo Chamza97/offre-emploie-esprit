@@ -1,0 +1,27 @@
+<div class="job_filter white-bg">
+  <div class="form_inner white-bg">
+    <h3>Filter</h3>
+    <form  [formGroup]="oppoSuitsForm" (ngSubmit)="onSubmit()" action="#">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="single_field">
+            <input type="text" placeholder="titre"  formControlName="titre"  (change)="changeTitre($event)" />
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="single_field">
+            <input type="text" placeholder="description"   formControlName="description"  (change)="changeDescription($event)"/>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="single_field">
+            <input type="number" placeholder="années expericences"  formControlName="anneeExperience"  (change)="changeAnneeExperice($event)"/>
+          </div>
+        </div>
+      </div>
+      <div class="reset_btn">
+        <button   class="boxed-btn3 w-100" type="submit">Search</button>
+      </div>
+    </form>
+  </div>
+</div>
