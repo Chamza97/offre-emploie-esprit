@@ -1,0 +1,29 @@
+.bod {
+  margin: 10% auto auto;
+}
+.btn-theme {
+  color: #fff;
+  background-color: #4ECDC4;
+  border-color: #48bcb4;
+}
+.btn-theme:hover,
+.btn-theme:focus,
+.btn-theme:active,
+.btn-theme.active,
+.open .dropdown-toggle.btn-theme {
+  color: #fff;
+  background-color: #48bcb4;
+  border-color: #48bcb4;
+}
+.mt {
+  margin-top: 25px;
+}
+.p404 h1 {
+  font-weight: 900;
+}
+.centered {
+  text-align: center;
+}
+h3 {
+  font-family: 'Ruda', sans-serif;
+}

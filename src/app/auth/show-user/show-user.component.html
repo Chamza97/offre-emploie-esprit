@@ -1,0 +1,40 @@
+<div class="bradcam_area bradcam_bg_1">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="bradcam_text">
+          <h3>User Details</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="job_details_area">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-lg-4"></div>
+      <div class="col-lg-4">
+        <div class="job_sumary">
+          <div class="summery_header ">
+            <img  [src]="user?.photo | defaultImage" height="150" width="200" alt="" class="img-rounded ">
+          </div>
+          <div class="job_content">
+            <ul>
+              <li>firstName: <span>{{user?.nom}}</span></li>
+              <li>LastName: <span>{{user?.prenom}}</span></li>
+              <li>username: <span>{{user?.username}}</span></li>
+              <li>email: <span>{{user?.email}}</span></li>
+              <li>birthdate: <span>{{user?.dateDeNaissance}}</span></li>
+              <li>phone: <span>{{user?.tel}}</span></li>
+              <li>cin : <span> {{user?.cin}}</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-4"></div>
+    </div>
+  </div>
+</div>

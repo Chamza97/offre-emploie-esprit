@@ -1,0 +1,114 @@
+
+<div class="bradcam_area bradcam_bg_1">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="bradcam_text">
+          <h3>Add Offre</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row ">
+  <div class="col-lg-2 col-md-2 col-sm-1"></div>
+  <div class="col-lg-8 col-md-8 col-sm-10 ">
+    <div class="ibox ">
+      <div class="ibox-title">
+        <h2 class="text-center">ADD Offre </h2>
+      </div>
+      <div class="ibox-content">
+        <form #formulaire="ngForm" >
+            <div class="form-group row">
+              <label  class="col-sm-2 col-md-2  col-lg-2 col-form-label">Title</label>
+              <div class="col-sm-8 col-md-8">
+                <mat-form-field class="example-full-width">
+                  <input required [(ngModel)]="offre.titre" name="titre"  type="text"   matInput placeholder="title" >
+                </mat-form-field>
+              </div>
+            </div>
+          <hr class="my-3"/>
+          <div class="form-group row">
+            <label class="col-sm-2 col-md-2  col-lg-2 col-form-label">Description</label>
+            <div class="col-sm-8 col-md-8">
+              <angular-editor required  [(ngModel)]="offre.description" name="description" [placeholder]="'Enter text here...'" ></angular-editor>
+            </div>
+          </div>
+          <hr class="my-3"/>
+          <!-- --------- !-->
+          <div class="form-group row">
+            <label  class="col-sm-2 col-md-2  col-lg-2 col-form-label">Required Skills</label>
+            <div class="col-sm-8 col-md-8">
+              <tag-input required  [(ngModel)]="offre.tags" name="tags" [ngModel]="['@item']"
+                         [onlyFromAutocomplete]="true">
+                <tag-input-dropdown  [showDropdownIfEmpty]="true"
+                                    [autocompleteItems]="['JAVA', 'HTML', 'CSS','PHP','ANGULAR','SYMFONY']">
+                </tag-input-dropdown>
+              </tag-input>
+            </div>
+          </div>
+          <hr class="my-3"/>
+          <div class="form-group row">
+            <label class="col-sm-2 col-md-2  col-lg-2 col-form-label">Salary</label>
+            <div class="col-sm-8 col-md-8">
+              <mat-form-field class="example-full-width">
+                <input required  [(ngModel)]="offre.salaire" name="salaire" min="0" max="10000" type="number"   matInput placeholder="salary" >
+              </mat-form-field>
+            </div>
+          </div>
+          <hr class="my-3"/>
+          <div class="form-group row">
+            <label  class="col-sm-2 col-md-2  col-lg-2 col-form-label"> Years of experience</label>
+            <div class="col-sm-8 col-md-8">
+              <mat-form-field appearance="outline" class="example-full-width">
+                <input required  [(ngModel)]="offre.nbAnneeExperience" name="anneeExperience"  min="0" max="40" type="number"   matInput placeholder="Years of experience" >
+              </mat-form-field>
+            </div>
+          </div>
+          <hr class="my-3"/>
+          <div class="form-group row">
+            <label  class="col-sm-2 col-md-2  col-lg-2 col-form-label"> Adresse</label>
+            <div class="col-sm-8 col-md-8">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Address</mat-label>
+                  <textarea required  [(ngModel)]="offre.adresse" name="adresse" matInput placeholder="Ex. Ariana"></textarea>
+                </mat-form-field>
+            </div>
+          </div>
+
+          <hr class="my-3"/>
+          <div class="form-group row">
+            <label  class="col-sm-2 col-md-2  col-lg-2 col-form-label"> Type of Contract</label>
+            <div class="col-sm-8 col-md-8">
+              <mat-form-field appearance="outline">
+                <mat-label>Type of Contract</mat-label>
+                <select  [(ngModel)]="offre.contratType" name="contrat_type" matNativeControl >
+                  <option value="CDI">CDI</option>
+                  <option value="CDD">CDD</option>
+                </select>
+              </mat-form-field>
+            </div>
+          </div>
+          <hr class="my-3"/>
+          <div class="form-group row">
+            <label  class="col-sm-2 col-md-2  col-lg-2 col-form-label"> Type of Contract</label>
+            <div class="col-sm-8 col-md-8">
+              <mat-form-field appearance="standard">
+                <mat-label>Status</mat-label>
+                <select disabled  [(ngModel)]="offre.status"   name="status" matNativeControl required>
+                  <option value="false">Open</option>
+                  <option value="true">Expired</option>
+                </select>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="text-center">
+
+            <button  (click)="ajouterFormulaire(formulaire.valid)" class="btn btn-success" value="Save">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-2 col-md-2 col-sm-1" ></div>
+</div>

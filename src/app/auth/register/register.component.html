@@ -1,0 +1,99 @@
+
+<div class="bradcam_area bradcam_bg_1">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="bradcam_text">
+          <h3>Register</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="job_details_area">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 col-sm-1 col-lg-2"></div>
+      <div class="col-md-8 col-sm-10 col-lg-8">
+        <div class="job_details_header">
+
+        </div>
+
+        <div class="apply_job_form white-bg">
+          <h4>Register</h4>
+          <form #formulaire="ngForm" >
+            <div class="row">
+              <div class="col-md-6">
+                <div class="input_field">
+                  <input type="text" [(ngModel)]="userData.prenom" required name="firstName" placeholder="First name">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input_field">
+                  <input type="text" [(ngModel)]="userData.nom" required name="lastName" placeholder="Last Name">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="input_field">
+                  <input type="text" [(ngModel)]="userData.username" required class="wide" name="password" placeholder="Username">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="input_field">
+                  <input type="email" [(ngModel)]="userData.email" required name="email" placeholder="Email">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="input_field">
+                  <input type="number" [(ngModel)]="userData.cin" required name="cin" placeholder="Cin">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="input_field">
+                  <input type="tel" [(ngModel)]="userData.tel" required name="tel" placeholder="Phone">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="input_field">
+                  <input type="password" [(ngModel)]="userData.password" required  name="password" placeholder="Password">
+                </div>
+              </div>
+              <div class="col-md-6 ">
+                <div class="input_field">
+                  <input type="date" [(ngModel)]="userData.dateDeNaissance" required name="birthdate"  placeholder="Birthdate">
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <button type="button" id="inputGroupFileAddon03"><i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <div class="custom-file ">
+                    <input  [(ngModel)]="selectedFile" accept="image/jpg" type="file" name="photo" (change)="handleFileSelect($event)"class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
+                    <label class="custom-file-label" for="inputGroupFile03">Upload Your Picture</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div ><img [src]="url | defaultImage" height="75" alt=""></div>
+              </div>
+              <div class="col-md-12 mt-5">
+                <div class="submit_btn">
+                  <button   (click)="ajouterFormulaire()" class="boxed-btn3 w-100" type="submit">Register</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-1 col-lg-2">
+
+    </div>
+  </div>
+</div>
+</div>
+

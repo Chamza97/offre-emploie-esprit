@@ -1,0 +1,35 @@
+
+<div class="job_lists m-0">
+  <div class="row">
+    <div class="col-lg-12 col-md-12">
+      <div class="single_jobs white-bg d-flex justify-content-between">
+        <div class="jobs_left d-flex align-items-center">
+          <div class="thumb">
+            <img src="assets/template/img/svg_icon/1.svg" alt="">
+          </div>
+          <div class="jobs_conetent">
+            <h4> {{ offre.titre }}</h4>
+            <div class="links_locat d-flex align-items-center">
+              <div class="location">
+                <p> <i class="fa fa-map-marker"></i> {{ offre.adresse }}</p>
+              </div>
+              <div class="location">
+                <button *ngFor=" let tag of offre.tags"  type="button" class="btn btn-primary btn-xs">{{tag.value}}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="jobs_right">
+          <div class="apply_now">
+            <a *ngIf="offre.status == false" class="heart_mark" href="#"> open </a>
+            <a *ngIf="offre.status == true" class="heart_mark" href="#"> expired </a>
+            <a (click)="selectedOffre(offre)" class="boxed-btn3">Show details</a>
+          </div>
+          <div class="date">
+            <p>Date Pub: {{  offre.datePublication }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
