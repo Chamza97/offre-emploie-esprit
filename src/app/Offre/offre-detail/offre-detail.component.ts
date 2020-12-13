@@ -23,6 +23,7 @@ export class OffreDetailComponent implements OnInit {
         this.service.getOffreById(params.id).subscribe(
           (result) => {
             this.offre = result;
+            this.offre.id = params.id
           },
           (error) =>{
             console.log(error);

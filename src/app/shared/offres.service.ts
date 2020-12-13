@@ -24,14 +24,15 @@ export class OffresService {
     return this.http.post(this.link ,data);
   }
   deleteOffre(id):Observable<any>{
+    console.log(id)
     return this.http.delete(this.link +'/' + id);
   }
   updateOffre(offre):Observable<any>{
     const data = JSON.stringify(offre);
-    return this.http.put(this.link + '/',data);
+    return this.http.put(this.link +'/'+offre.id,data);
   }
   searchOffre(titre:string,description:string,anneeExperience:string):Observable<Offre[]>{
-    console.log(description=='')
+
     let params = new HttpParams();
     if(titre != null){
      params =  params.append('titre_like', titre);
